@@ -5,10 +5,33 @@ import BtnCard from '../buscador/btnCard';
 import ResumenCard from '../buscador/resumenCard';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+function ContenidoText(params) {
+    return(
+        // <div className="p-4 pt-10">
+            <p className="text-gray-800 text-lg font-semibold">Xcaret es el parque en Playa del Carmen con más de 50 atracciones 
+            naturales y culturales en donde te reencuentras con la naturaleza en su maravilloso marco
+            rico en flora y fauna; Y con México, en atracciones que te recuerdan lo grandiosa que es 
+            esta tierra. Descubre por qué Xcaret es el lugar más emblemático de la Riviera Maya </p>
+        // </div>
+    );
+}
+
 class Contenido extends React.Component{
     render(){
+        const sendTabsCompra = [
+            {text:'Compra tu admisión', className:'bg-green-700 arrow-tab-movil', classActive:'bg-green-700 arrow-tab-movil', Contenido: <ResumenCard />, classContenido: '', classActiveCont:''},
+            {text:'Atracciones', className:'bg-green-600 hover:bg-green-700', classActive:'bg-green-700 arrow-tab-movil', Contenido: 'Tab contenido 1', classContenido: 'hidden', classActiveCont:''},
+            {text:'Gastronomía', className:'bg-green-600 hover:bg-green-700', classActive:'bg-green-700 arrow-tab-movil', Contenido: 'Tab cocontenito 2', classContenido: 'hidden', classActiveCont:''},
+            {text:'Como llegar', className:'bg-green-600 hover:bg-green-700', classActive:'bg-green-700 arrow-tab-movil', Contenido: 'Tab contenido 3', classContenido: 'hidden', classActiveCont:''}
+        ];
+        const sendTabsM = [
+            {text:'¿Qué es Xcaret?', className:'bg-green-700 arrow-tab-movil', classActive:'bg-green-700 arrow-tab-movil', Contenido: <ContenidoText />, classContenido: '', classActiveCont:''},
+            {text:'Que Incluye', className:'bg-green-600 hover:bg-green-700', classActive:'bg-green-700 arrow-tab-movil', Contenido: 'Tab contenido 1', classContenido: 'hidden', classActiveCont:''},
+            {text:'Recomendaciones', className:'bg-green-600 hover:bg-green-700', classActive:'bg-green-700 arrow-tab-movil', Contenido: 'Tab cocontenito 2', classContenido: 'hidden', classActiveCont:''},
+            {text:'Información Importante', className:'bg-green-600 hover:bg-green-700', classActive:'bg-green-700 arrow-tab-movil', Contenido: 'Tab contenido 3', classContenido: 'hidden', classActiveCont:''}
+        ];
         return(
-            <div className="container m-auto p-10">
+            <div className="container m-auto px-10 lg:p-10">
                 <div className="hidden lg:flex xl:flex flex-no-shrink text-grey-700">
                     <div className="justify-start lg:w-3/5 xl:w-3/5">
                         <nav className="bg-grey-light rounded w-full">
@@ -56,13 +79,11 @@ class Contenido extends React.Component{
                 </div>
                 <div className="flex flex-no-shrink text-grey-700 lg:hidden xl:hidden">
                     <div className="justify-start w-full">
-                        <ResumenCard />
+                        <TabsMobile tabs={sendTabsCompra} />
                     </div>
                 </div>
                 <div className="flex flex-no-shrink text-grey-700 lg:hidden xl:hidden">
-                    <div className="justify-start w-full pt-4">
-                        <TabsMobile />
-                    </div>
+                    <TabsMobile tabs={sendTabsM} />
                 </div>
             </div>
         );

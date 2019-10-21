@@ -21,7 +21,7 @@ class Cards extends React.Component{
         return(
             <div className="container m-auto">
                 <div className="flex flex-wrap items-center justify-center">
-                    <p className="text-left text-md font-bold text-gray-700 mt-2 pl-10 pr-3 w-full">
+                    <p className="text-left text-lg font-bold text-gray-800 mt-2 pl-10 pr-3 w-full">
                         Los visitantes que compraron su admisión a Parque Xcaret también compraron:
                     </p>
                     {content}
