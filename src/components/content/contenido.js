@@ -7,12 +7,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function ContenidoText(params) {
     return(
-        // <div className="p-4 pt-10">
-            <p className="text-gray-800 text-lg font-semibold">Xcaret es el parque en Playa del Carmen con más de 50 atracciones 
-            naturales y culturales en donde te reencuentras con la naturaleza en su maravilloso marco
-            rico en flora y fauna; Y con México, en atracciones que te recuerdan lo grandiosa que es 
-            esta tierra. Descubre por qué Xcaret es el lugar más emblemático de la Riviera Maya </p>
-        // </div>
+        <p className="text-gray-800 text-lg font-semibold">Xcaret es el parque en Playa del Carmen con más de 50 atracciones 
+        naturales y culturales en donde te reencuentras con la naturaleza en su maravilloso marco
+        rico en flora y fauna; Y con México, en atracciones que te recuerdan lo grandiosa que es 
+        esta tierra. Descubre por qué Xcaret es el lugar más emblemático de la Riviera Maya </p>
     );
 }
 

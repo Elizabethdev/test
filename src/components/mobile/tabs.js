@@ -31,7 +31,7 @@ class MobileTabs extends React.Component{
         const auxTabs = this.state.tabs.slice();
         
         auxTabs.forEach((item, index) => {
-            if(index == i){
+            if(index === i){
                 item.className = this.state.classActive;
                 item.classContenido = this.state.classActiveCont; 
             }

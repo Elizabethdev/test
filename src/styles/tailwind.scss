@@ -697,10 +697,6 @@ footer {
   flex-wrap: wrap;
 }
 
-.slide {
-  background-color: #edf2f7;
-}
-
 .text-green-xc{
   color: $header-color;
 }
@@ -767,6 +763,25 @@ footer {
   padding: 1rem;
   border-color: #fff;
   border-left-width: 2px;
+}
+
+.slider-item{
+  perspective: 1000px;
+  display: none;
+  transition: transform 0.6s ease;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.slider-item-active{
+  perspective: 1000px;
+  display: block;
+  -webkit-backface-visibility: block;
+          backface-visibility: block;
+}
+
+.slide {
+  background-color: #edf2f7;
 }
 
 .sr-only {
