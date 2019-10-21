@@ -118,7 +118,6 @@ footer {
 .slider-item-active{
   @apply block;
   perspective: 1000px;
-	// display: block;
 	backface-visibility: block;
 }
 .slide {
