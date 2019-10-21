@@ -1,0 +1,155 @@
+
+@tailwind base;
+@tailwind components;
+
+$header-color: #009335;
+$sub-head-color: #38934b;
+$arrow-box : #38a169;
+$arrow-tab : #2f855a;
+
+header {
+  background-color: $header-color;
+  font-size: calc(10px + 2vmin);
+  color: white;
+
+  /*
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-height: 100px;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  */
+}
+
+footer {
+  background-color: $header-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.App-logo {
+  height: 40vmin;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+.arrow_box {
+	position: relative;
+  background: $arrow-box;
+	border: 2px solid $arrow-box;
+}
+
+.arrow_box:after, .arrow_box:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow_box:after {
+	border-color: rgba(0, 147, 53, 0);
+	border-top-color: $arrow-box;
+	border-width: 5px;
+	margin-left: -5px;
+}
+.arrow_box:before {
+	border-color: rgba(0, 147, 53, 0);
+	border-top-color: $arrow-box;
+	border-width: 14px;
+	margin-left: -14px;
+}
+
+.nav-header{
+  @apply items-center;
+  @apply justify-between;
+  @apply flex-wrap;
+}
+
+.slide {
+  @apply bg-gray-200;
+}
+
+.text-green-xc{
+  color: $header-color;
+}
+
+.tab-selected {
+  color: $header-color;
+  @apply border-green-600;
+  @apply border-l;
+  @apply border-t;
+  @apply border-r;
+  @apply rounded-t;
+}
+
+.react-tab {
+  cursor: pointer;
+  @apply bg-white;
+  @apply inline-block;
+  @apply py-2;
+  @apply px-4;
+  @apply font-semibold;
+}
+
+/*css movil */
+
+.arrow-tab-movil {
+	position: relative;
+  background: $arrow-tab;
+}
+
+.arrow-tab-movil:after, .arrow-tab-movil:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow-tab-movil:after {
+	border-color: rgba(0, 147, 53, 0);
+	border-top-color: $arrow-tab;
+	border-width: 5px;
+	margin-left: -5px;
+}
+.arrow-tab-movil:before {
+	border-color: rgba(0, 147, 53, 0);
+	border-top-color: $arrow-tab;
+	border-width: 14px;
+	margin-left: -14px;
+}
+.bg-subhead-movil{
+  background-color: $sub-head-color;
+}
+
+.nav-icon-movil{
+  @apply flex-1;
+  @apply p-4;
+  @apply border-white;
+  @apply border-l-2;
+}
+
+@tailwind utilities;
